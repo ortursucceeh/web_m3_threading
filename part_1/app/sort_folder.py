@@ -65,7 +65,7 @@ def sort_folder(main_path):
                     shutil.move(file, file_newpath)
 
             # check if file is folder which is not in IGRONE_FOLDERS
-            if file.is_dir() and file.name not in IGNORE_FOLDERS:
+            elif file.is_dir() and file.name not in IGNORE_FOLDERS:
 
                 # if folder is empty - delete it
                 if not os.listdir(file):
